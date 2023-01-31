@@ -10,6 +10,16 @@ body {
   margin: 0;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
+  body#bg-img {
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(68, 68, 68, 0.9);
+      z-index: -1; }
 
 h1,
 h2,

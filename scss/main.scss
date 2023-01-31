@@ -1,20 +1,4 @@
-$primary-clr: #444;
-$secondary-clr: #eece1a;
-$show-home-image: true;
-$home-image: url(../dist/img/background.jpg);
-$background-opacity: 0.9;
-
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
-@mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-    }
-  }
-}
+@import 'config';
 
 *,
 *::before,
