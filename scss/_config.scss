@@ -26,3 +26,33 @@ $portrait-image: url(../img/Fredrik_Andersson.png);
     }
   }
 }
+
+// Media query Mixins
+
+// Smartphones
+@mixin mediaSm {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+// Tablets & small Laptops
+@mixin mediaMd {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Desktops & Laptops
+@mixin mediaLg {
+  @media (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+// Widescreens
+@mixin mediaXl {
+  @media (min-width: 1171px) {
+    @content;
+  }
+}
