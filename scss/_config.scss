@@ -27,6 +27,15 @@ $portrait-image: url(../img/Fredrik_Andersson.png);
   }
 }
 
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media query Mixins
 
 // Smartphones
