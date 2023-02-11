@@ -43,7 +43,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: $background-opacity;
+  background-color: rgba($primary-clr, $background-opacity);
   visibility: hidden;
 
   &.show {
@@ -66,7 +66,6 @@
 
   // Branding side
   &-branding {
-    background-color: $primary-clr;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
@@ -82,8 +81,6 @@
       border-radius: 50%;
       border: 3px solid $secondary-clr;
       background-size: cover;
-
-      // FIXME: Color and opacity/z-index incorrect
     }
   }
 
@@ -91,7 +88,10 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background-color: darken($primary-clr, 5);
+    background-color: rgba(
+      $darken-primary-color-5,
+      $background-opacity-secondary
+    );
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
