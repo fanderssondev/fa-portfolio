@@ -8,6 +8,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         dist: resolve(__dirname, '/dist/index.html'),
+        dist: resolve(__dirname, '/dist/contact.html'),
+        dist: resolve(__dirname, '/dist/work.html'),
+        dist: resolve(__dirname, '/dist/about.html'),
       },
     },
   },
