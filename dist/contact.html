@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="icon" href="/dist/img/FA-alpha.png" type="image/x-icon" />
     <title>Contact Me</title>
   </head>
   <body>
@@ -39,18 +40,62 @@
       <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
       <h2 class="sm-heading">This is how you can reach me...</h2>
 
-      <div class="boxes">
-        <div>
-          <span class="text-secondary">Email: </span>
-          fredrikanderssondev@gmail.com
-        </div>
-        <div>
-          <span class="text-secondary">Phone: </span>
-          +34 123456789
-        </div>
-        <div>
-          <span class="text-secondary">Address: </span>
-          Carrer de Alcalde de Mostoles 50, 08025 Barcelona
+      <div class="contact-container">
+        <!-- Left hand side -->
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/fredrikanderssondev@gmail.com"
+          method="POST"
+        >
+          <label for="name">
+            <input
+              class="form-field"
+              type="text"
+              id="name"
+              name="Name"
+              placeholder="Full name"
+              required
+            />
+          </label>
+          <label for="email">
+            <input
+              class="form-field"
+              type="email"
+              id="email"
+              name="Email"
+              placeholder="example@mail.com"
+              required
+            />
+          </label>
+          <label for="message">
+            <textarea
+              class="form-field"
+              rows="10"
+              id="message"
+              name="Message"
+              placeholder="Message"
+              required
+            ></textarea>
+          </label>
+          <button class="form-btn" type="submit">Send</button>
+        </form>
+
+        <!-- Right hand side -->
+        <div class="contact-info">
+          <a href="mailto:fredrikanderssondev@gmail.com"
+            >fredrikanderssondev@gmail.com</a
+          >
+          <div class="icons">
+            <a href="https://github.com/fanderssondev" target="_blank">
+              <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fredrikanderssondev"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin-in fa-3x"></i>
+            </a>
+          </div>
         </div>
       </div>
     </main>

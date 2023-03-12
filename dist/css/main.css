@@ -197,24 +197,32 @@ main {
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
-.boxes {
+.contact-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background-color: #eece1a;
-      color: #000; }
-      .boxes div:hover span {
-        color: #000; }
+  justify-content: space-between;
+  padding: 3rem 3rem 1rem 3rem; }
+  .contact-container .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 1rem; }
+    .contact-container .contact-form .form-field {
+      border: 2px solid #eece1a;
+      border-radius: 3px;
+      background-color: rgba(73, 73, 73, 0.5);
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem; }
+      .contact-container .contact-form .form-field::placeholder {
+        color: #fff; }
+    .contact-container .contact-form textarea {
+      resize: none; }
+    .contact-container .contact-form .form-btn {
+      border: 2px solid #eece1a;
+      background-color: rgba(73, 73, 73, 0.5);
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
