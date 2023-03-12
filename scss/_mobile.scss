@@ -21,11 +21,11 @@
 
     // NOTE: Double check if OK. Else remove this + &#home
     margin-inline: auto;
+    max-width: 85vw;
 
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
-      font-size: 20vw;
     }
 
     &#home {
@@ -84,6 +84,7 @@
   main#home > h1 {
     margin-top: 10vh;
     margin-top: 10dvh;
+    font-size: 19vw;
   }
 
   .projects {
