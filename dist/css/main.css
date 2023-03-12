@@ -253,11 +253,11 @@ main {
     align-items: center;
     text-align: center;
     padding-inline: 0;
-    margin-inline: auto;
-    max-width: 85vw; }
+    margin-inline: auto; }
     main .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 20vw; }
     main#home {
       max-width: 100vw; }
   ul.menu-nav,
