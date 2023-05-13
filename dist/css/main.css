@@ -198,17 +198,18 @@ main {
       transition: all 0.5s ease-out; }
 
 .contact-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 3rem 1rem 3rem; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  padding-top: 3rem; }
   .contact-container .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
     gap: 1rem; }
     .contact-container .contact-form .form-field {
+      width: 100%;
       border: 2px solid #eece1a;
-      border-radius: 3px;
+      border-radius: 5px;
       background-color: rgba(73, 73, 73, 0.5);
       color: #fff;
       font-size: 1.5rem;
@@ -217,12 +218,34 @@ main {
         color: #fff; }
     .contact-container .contact-form textarea {
       resize: none; }
-    .contact-container .contact-form .form-btn {
-      border: 2px solid #eece1a;
-      background-color: rgba(73, 73, 73, 0.5);
-      color: #fff;
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem; }
+    .contact-container .contact-form button:hover {
+      background-color: rgba(50, 50, 50, 0.5); }
+  .contact-container .contact-info {
+    display: grid;
+    grid-template-areas: 'i1 t1' 'i2 t2' 'i3 t3' 'logo logo';
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem; }
+    .contact-container .contact-info .icon-1 {
+      grid-area: i1;
+      margin-left: -2px; }
+    .contact-container .contact-info .icon-2 {
+      grid-area: i2; }
+    .contact-container .contact-info .icon-3 {
+      grid-area: i3;
+      margin-left: 3px; }
+    .contact-container .contact-info .text-1 {
+      grid-area: t1; }
+    .contact-container .contact-info .text-2 {
+      grid-area: t2; }
+    .contact-container .contact-info .text-3 {
+      grid-area: t3; }
+    .contact-container .contact-info .logo {
+      grid-area: logo;
+      justify-self: center;
+      opacity: 0.2; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
@@ -254,7 +277,9 @@ main {
 
 @media (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .contact-container {
+    grid-template-columns: 1fr; } }
 
 @media (max-width: 768px) {
   main {
@@ -268,6 +293,8 @@ main {
       margin-bottom: 1rem; }
     main#home {
       max-width: 100vw; }
+    main .contact-container {
+      grid-template-columns: 1fr; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -299,4 +326,6 @@ main {
     margin-top: 10dvh;
     font-size: 17vw; }
   .projects {
+    grid-template-columns: 1fr; }
+  .contact-container {
     grid-template-columns: 1fr; } }

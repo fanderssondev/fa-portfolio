@@ -138,48 +138,22 @@ main {
   }
 }
 
-// Contact page
-// FIXME: remake
-// .boxes {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-evenly;
-//   align-items: center;
-//   margin-top: 1rem;
-
-//   div {
-//     font-size: 2rem;
-//     border: 3px solid #fff;
-//     padding: 1.5rem 2.5rem;
-//     margin-bottom: 3rem;
-//     @include easeOut;
-
-//     &:hover {
-//       padding: 0.5rem 1.5rem;
-//       background-color: $secondary-clr;
-//       color: set-text-color($secondary-clr);
-
-//       span {
-//         color: set-text-color($secondary-clr);
-//       }
-//     }
-//   }
-// }
-
 .contact-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 3rem 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  padding-top: 3rem;
 
+  // Left side
   .contact-form {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
     gap: 1rem;
 
     & .form-field {
+      width: 100%;
       border: 2px solid $secondary-clr;
-      border-radius: 3px;
+      border-radius: 5px;
       background-color: rgba(lighten($primary-clr, 2), 0.5);
       color: set-text-color($primary-clr);
       font-size: 1.5rem;
@@ -194,12 +168,55 @@ main {
       resize: none;
     }
 
-    .form-btn {
-      border: 2px solid $secondary-clr;
-      background-color: rgba(lighten($primary-clr, 2), 0.5);
-      color: set-text-color($primary-clr);
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
+    button:hover {
+      background-color: rgba(darken($primary-clr, 7), 0.5);
+    }
+  }
+
+  // Right side
+  .contact-info {
+    display: grid;
+    grid-template-areas:
+      'i1 t1'
+      'i2 t2'
+      'i3 t3'
+      'logo logo';
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+
+    .icon-1 {
+      grid-area: i1;
+      margin-left: -2px;
+    }
+
+    .icon-2 {
+      grid-area: i2;
+    }
+
+    .icon-3 {
+      grid-area: i3;
+      margin-left: 3px;
+    }
+
+    .text-1 {
+      grid-area: t1;
+    }
+
+    .text-2 {
+      grid-area: t2;
+    }
+
+    .text-3 {
+      grid-area: t3;
+    }
+
+    .logo {
+      grid-area: logo;
+      justify-self: center;
+      opacity: 0.2;
     }
   }
 }

@@ -10,6 +10,10 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Tablets & small Laptops - <= 768px
@@ -30,6 +34,10 @@
 
     &#home {
       max-width: 100vw;
+    }
+
+    .contact-container {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -88,6 +96,10 @@
   }
 
   .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
     grid-template-columns: 1fr;
   }
 }
