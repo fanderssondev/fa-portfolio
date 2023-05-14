@@ -188,15 +188,49 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem; }
-  .projects img {
-    width: 100%;
-    border: 3px solid #fff; }
-    .projects img:hover {
+  .projects .card {
+    display: grid;
+    grid-template-areas: 'picture text' 'buttons tech';
+    gap: 1rem;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    padding: 0.75rem; }
+    .projects .card:hover {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+    .projects .card-picture {
+      grid-area: picture;
+      width: 200px;
+      aspect-ratio: 1.16 / 1;
+      border-radius: 5px; }
+    .projects .card-text {
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      padding-left: 2rem; }
+      .projects .card-text-title {
+        font-size: 1.5rem; }
+    .projects .card .card-technologies {
+      grid-area: tech;
+      display: flex;
+      justify-content: space-around; }
+      .projects .card .card-technologies-logo {
+        width: 4rem;
+        aspect-ratio: 1/1; }
+    .projects .card-buttons {
+      grid-area: buttons;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; }
+      .projects .card-buttons-btn {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 1.25rem;
+        text-align: center; }
 
 .contact-container {
   display: grid;
@@ -282,11 +316,9 @@ main {
 
 @media (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); }
   .contact-container {
     grid-template-columns: 1fr; }
     .contact-container .logo {
@@ -329,9 +361,7 @@ main {
     font-size: 24px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: 1fr; } }
 
 @media (max-width: 500px) {
   main#home > h1 {
@@ -340,8 +370,6 @@ main {
     font-size: 17vw; }
   main#contact {
     padding-bottom: 0; }
-  .projects {
-    grid-template-columns: 1fr; }
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem; }
