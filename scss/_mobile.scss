@@ -10,8 +10,17 @@
   .contact-container {
     grid-template-columns: 1fr;
 
-    .logo {
-      display: none;
+    // .logo {
+    //   display: none;
+    // }
+
+    .contact-info {
+      grid-template-areas:
+        'i1 t1 logo'
+        'i2 t2 logo'
+        'i3 t3 logo';
+
+      grid-template-columns: auto auto 1fr;
     }
   }
 }
@@ -22,9 +31,6 @@
     align-items: center;
     text-align: center;
     padding-inline: 0;
-
-    // NOTE: Double check if OK. Else remove this + &#home
-    margin-inline: auto;
     max-width: 85vw;
 
     .lg-heading {

@@ -146,7 +146,8 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
-  min-height: calc(100dvh - 60px); }
+  min-height: calc(100dvh - 60px);
+  margin-inline: auto; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -188,13 +189,14 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem;
-  outline: 1px solid red; }
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem; }
   .projects .card {
     display: grid;
     grid-template-areas: 'picture text' 'buttons tech';
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 1fr;
     gap: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
@@ -205,6 +207,8 @@ main {
       transition: all 0.5s ease-out; }
     .projects .card-picture {
       grid-area: picture;
+      width: 100%;
+      height: auto;
       border-radius: 5px; }
     .projects .card-text {
       grid-area: text;
@@ -316,15 +320,15 @@ main {
 @media (min-width: 769px) and (max-width: 1170px) {
   .contact-container {
     grid-template-columns: 1fr; }
-    .contact-container .logo {
-      display: none; } }
+    .contact-container .contact-info {
+      grid-template-areas: 'i1 t1 logo' 'i2 t2 logo' 'i3 t3 logo';
+      grid-template-columns: auto auto 1fr; } }
 
 @media (max-width: 768px) {
   main {
     align-items: center;
     text-align: center;
     padding-inline: 0;
-    margin-inline: auto;
     max-width: 85vw; }
     main .lg-heading {
       line-height: 1;

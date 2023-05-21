@@ -56,6 +56,7 @@ main {
   // height: 100%;
   min-height: calc(100vh - 60px);
   min-height: calc(100dvh - 60px);
+  margin-inline: auto;
 
   .icons {
     margin-top: 1rem;
@@ -79,7 +80,7 @@ main {
   }
 }
 
-// About me
+// About me ===================================================
 // TODO remake
 .about-info {
   display: grid;
@@ -122,21 +123,20 @@ main {
   }
 }
 
-// Work/Projects
+// Work/Projects ===================================================
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem;
-  outline: 1px solid red;
-  // width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
 
   .card {
     display: grid;
     grid-template-areas:
       'picture text'
       'buttons tech';
-    grid-template-columns: 100px 1fr;
-    // grid-template-rows: 200px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 200px 1fr;
     gap: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
@@ -150,9 +150,8 @@ main {
 
     &-picture {
       grid-area: picture;
-      // width: 200px;
-      // Ascept ratio should be 1.16 / 1
-      // aspect-ratio: 1.16 / 1;
+      width: 100%;
+      height: auto;
       border-radius: 5px;
     }
 
@@ -196,7 +195,7 @@ main {
   }
 }
 
-// Contact page
+// Contact page ==============================================
 .contact-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
