@@ -125,14 +125,18 @@ main {
 // Work/Projects
 .projects {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1rem;
+  outline: 1px solid red;
+  // width: 100%;
 
   .card {
     display: grid;
     grid-template-areas:
       'picture text'
       'buttons tech';
+    grid-template-columns: 100px 1fr;
+    // grid-template-rows: 200px 1fr;
     gap: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
@@ -146,9 +150,9 @@ main {
 
     &-picture {
       grid-area: picture;
-      width: 200px;
+      // width: 200px;
       // Ascept ratio should be 1.16 / 1
-      aspect-ratio: 1.16 / 1;
+      // aspect-ratio: 1.16 / 1;
       border-radius: 5px;
     }
 
@@ -156,7 +160,7 @@ main {
       grid-area: text;
       display: flex;
       flex-direction: column;
-      width: 300px;
+      // width: 100px;
       padding-left: 2rem;
 
       &-title {

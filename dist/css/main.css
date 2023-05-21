@@ -188,11 +188,13 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem; }
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+  outline: 1px solid red; }
   .projects .card {
     display: grid;
     grid-template-areas: 'picture text' 'buttons tech';
+    grid-template-columns: 100px 1fr;
     gap: 1rem;
     border: 3px solid #fff;
     border-radius: 5px;
@@ -203,14 +205,11 @@ main {
       transition: all 0.5s ease-out; }
     .projects .card-picture {
       grid-area: picture;
-      width: 200px;
-      aspect-ratio: 1.16 / 1;
       border-radius: 5px; }
     .projects .card-text {
       grid-area: text;
       display: flex;
       flex-direction: column;
-      width: 300px;
       padding-left: 2rem; }
       .projects .card-text-title {
         font-size: 1.5rem; }
@@ -313,10 +312,6 @@ main {
   color: #fff;
   height: 60px;
   width: 100vw; }
-
-@media (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
 
 @media (min-width: 769px) and (max-width: 1170px) {
   .contact-container {

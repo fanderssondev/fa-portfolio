@@ -1,8 +1,8 @@
 // Widescreens - >= 1171px =======================================
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // .projects {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 }
 
 // Desktops & Laptops - >= 769px <= 1170px ==================================
