@@ -142,11 +142,11 @@ main {
     border-radius: 5px;
     padding: 0.75rem;
 
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-clr;
-      @include easeOut;
-    }
+    // &:hover {
+    //   opacity: 0.5;
+    //   border-color: $secondary-clr;
+    //   @include easeOut;
+    // }
 
     &-picture {
       grid-area: picture;
@@ -163,7 +163,7 @@ main {
       padding-left: 2rem;
 
       &-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
     }
 
