@@ -87,7 +87,7 @@ main {
   gap: 30px;
   grid-template-areas:
     'bioimage bio  bio'
-    'job1     job2 job3';
+    'education education education';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -101,25 +101,69 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    position: relative;
+
+    & .logo {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      z-index: -10;
+      height: 600px;
+      width: 600px;
+      opacity: 0.05;
+    }
   }
 
-  .job-1 {
-    grid-area: job1;
+  .education {
+    grid-area: education;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
   }
 
-  .job-2 {
-    grid-area: job2;
-  }
-
-  .job-3 {
-    grid-area: job3;
-  }
-
-  .job {
+  .courses {
     background-color: lighten($primary-clr, 5);
-    padding: 0.5rem;
+    padding: 1rem 3rem;
     border-bottom: 5px solid $secondary-clr;
+
+    .text-secondary {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .course {
+      margin-bottom: 1rem;
+      display: flex;
+      outline: 1px solid red;
+      padding: 0;
+
+      &-logo {
+        height: 75px;
+        width: 75px;
+        margin-right: 2rem;
+      }
+
+      &-text {
+        display: flex;
+        // justify-content: space-between;
+        // width: 100%;
+        outline: 1px solid red;
+
+        &-header {
+          display: inline-block;
+          flex-grow: 1;
+        }
+
+        &-finished {
+          white-space: nowrap;
+          margin-left: 2rem;
+        }
+
+        span {
+          color: $secondary-clr;
+        }
+      }
+    }
   }
 }
 

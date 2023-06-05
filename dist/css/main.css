@@ -164,7 +164,7 @@ main {
 .about-info {
   display: grid;
   gap: 30px;
-  grid-template-areas: 'bioimage bio  bio' 'job1     job2 job3';
+  grid-template-areas: 'bioimage bio  bio' 'education education education';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -175,17 +175,47 @@ main {
     border: 3px solid #eece1a; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
+    position: relative; }
+    .about-info .bio .logo {
+      position: absolute;
+      top: 20%;
+      right: 10%;
+      z-index: -10;
+      height: 600px;
+      width: 600px;
+      opacity: 0.05; }
+  .about-info .education {
+    grid-area: education;
+    display: flex;
+    justify-content: center;
+    gap: 5rem; }
+  .about-info .courses {
     background-color: #515151;
-    padding: 0.5rem;
+    padding: 1rem 3rem;
     border-bottom: 5px solid #eece1a; }
+    .about-info .courses .text-secondary {
+      text-align: center;
+      margin-bottom: 2rem; }
+    .about-info .courses .course {
+      margin-bottom: 1rem;
+      display: flex;
+      outline: 1px solid red;
+      padding: 0; }
+      .about-info .courses .course-logo {
+        height: 75px;
+        width: 75px;
+        margin-right: 2rem; }
+      .about-info .courses .course-text {
+        display: flex;
+        outline: 1px solid red; }
+        .about-info .courses .course-text-header {
+          display: inline-block;
+          flex-grow: 1; }
+        .about-info .courses .course-text-finished {
+          white-space: nowrap;
+          margin-left: 2rem; }
+        .about-info .courses .course-text span {
+          color: #eece1a; }
 
 .projects {
   display: grid;

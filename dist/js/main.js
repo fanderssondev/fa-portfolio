@@ -1,5 +1,5 @@
 // Select DOM Items
-const menuBtn = qs('.menu-btn'); // Probably .menu-btn
+const menuBtn = qs('.menu-btn');
 const menu = qs('.menu');
 const menuNav = qs('.menu-nav');
 const menuBranding = qs('.menu-branding');
