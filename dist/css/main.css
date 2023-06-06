@@ -199,15 +199,13 @@ main {
     .about-info .courses .course {
       margin-bottom: 1rem;
       display: flex;
-      outline: 1px solid red;
       padding: 0; }
       .about-info .courses .course-logo {
         height: 75px;
         width: 75px;
         margin-right: 2rem; }
       .about-info .courses .course-text {
-        display: flex;
-        outline: 1px solid red; }
+        display: flex; }
         .about-info .courses .course-text-header {
           display: inline-block;
           flex-grow: 1; }
