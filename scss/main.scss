@@ -81,7 +81,7 @@ main {
 }
 
 // About me ===================================================
-// TODO remake
+// BUG Not responsive
 .about-info {
   display: grid;
   gap: 30px;
@@ -195,7 +195,7 @@ main {
 
     &-picture {
       grid-area: picture;
-      width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 5px;
     }

@@ -232,7 +232,7 @@ main {
     padding: 0.75rem; }
     .projects .card-picture {
       grid-area: picture;
-      width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 5px; }
     .projects .card-text {
@@ -383,9 +383,12 @@ main {
     height: 75dvh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+  .projects .card {
+    grid-template-areas: 'picture tech' 'text text' 'buttons buttons';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 1fr auto; }
+    .projects .card-text {
+      padding-left: 0; } }
 
 @media (max-width: 500px) {
   main#home > h1 {

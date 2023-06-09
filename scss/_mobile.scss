@@ -80,16 +80,33 @@
   }
 
   .about-info {
-    grid-template-areas:
-      'bioimage'
-      'bio'
-      'job1'
-      'job2'
-      'job3';
+    // TODO remake
+    // grid-template-areas:
+    //   'bioimage'
+    //   'bio'
+    //   'job1'
+    //   'job2'
+    //   'job3';
 
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
     // margin-inline: auto;
     // max-width: 85vw;
+  }
+
+  .projects {
+    .card {
+      grid-template-areas:
+        'picture tech'
+        'text text'
+        'buttons buttons';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 1fr auto;
+      // background-color: red;
+
+      &-text {
+        padding-left: 0;
+      }
+    }
   }
 }
 
