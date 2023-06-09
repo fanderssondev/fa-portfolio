@@ -95,16 +95,36 @@
 
   .projects {
     .card {
-      grid-template-areas:
-        'picture tech'
-        'text text'
-        'buttons buttons';
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 200px 1fr auto;
+      // grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 200px 1fr auto;
       // background-color: red;
 
+      &-picture {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
       &-text {
-        padding-left: 0;
+        // padding-left: 0;
+        grid: none;
+
+        &-title {
+          grid-column: 1/-1;
+          grid-row: 1;
+        }
+
+        &-paragraph {
+          grid-column: 2/-1;
+        }
+      }
+
+      &-technologies {
+        grid-column: 2/-1;
+        // grid-row: 1;
+      }
+
+      &-buttons {
+        grid-column: 1/-1;
       }
     }
   }
