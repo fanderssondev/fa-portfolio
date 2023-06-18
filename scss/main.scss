@@ -163,71 +163,57 @@ main#about {
 }
 
 // Work/Projects ===================================================
+main#work {
+  max-width: 960px;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 3rem;
   margin-top: 4rem;
 
   .card {
-    $gap: 2rem;
-    display: grid;
-    // grid-template-areas:
-    //   'picture text'
-    //   'picture text'
-    //   'buttons tech';
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 50px calc(150px - $gap) 1fr;
-    gap: $gap 3rem;
-    border-bottom: 8px solid $secondary-clr;
-    padding: 2rem;
-    padding-right: 3rem;
     background-color: lighten($primary-clr, 5);
+    padding: 1rem 2rem;
+    border-bottom: 5px solid $secondary-clr;
+    width: 100%;
+    margin-inline: auto;
 
-    // &:hover {
-    //   opacity: 0.5;
-    //   border-color: $secondary-clr;
-    //   @include easeOut;
-    // }
-
-    &-title {
-      font-size: 2.8rem;
-      grid-column: 1 / -1;
-      grid-row: 1;
-      text-align: center;
-      letter-spacing: 1px;
-    }
+    display: grid;
+    grid-template-areas:
+      'picture text'
+      'tech    tech'
+      'buttons buttons';
+    gap: 3rem;
 
     &-picture {
-      grid-column: 1;
-      grid-row: 2 / 3;
-      max-width: 100%;
-      height: 200px;
-      // border-radius: 50%;
+      grid-area: picture;
     }
 
-    &-paragraph {
-      grid-column: 2 / -1;
-      grid-row: 2;
-      line-height: 2;
+    &-text {
+      grid-area: text;
+
+      &-title {
+        @extend .text-secondary;
+      }
     }
 
     &-technologies {
-      grid-column: 2;
-      grid-row: 2;
+      grid-area: tech;
       display: flex;
       justify-content: space-around;
-      § &-logo {
-        width: 4rem;
-        aspect-ratio: 1/1;
+      width: 100%;
+
+      &-logo {
+        width: 50px;
+        height: 50px;
       }
     }
 
     &-buttons {
-      grid-column: 1;
-      grid-row: 3;
+      grid-area: buttons;
       display: flex;
-      flex-direction: column;
+      width: 100%;
       gap: 0.75rem;
 
       &-btn {

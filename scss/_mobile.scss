@@ -97,31 +97,32 @@
 
   .projects {
     .card {
-      // grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 200px 1fr auto;
-      // background-color: red;
+      grid-template-areas:
+        'picture'
+        'text'
+        'tech'
+        'buttons';
+      justify-items: center;
 
       &-picture {
-        grid-column: 1;
-        grid-row: 2;
-      }
-      &-title {
-        grid-column: 1/-1;
-        grid-row: 1;
       }
 
-      &-paragraph {
-        grid-column: 1/-1;
-        grid-row: 3;
+      &-text {
+        &-title {
+          text-align: center;
+        }
+
+        &-paragraph {
+        }
       }
 
       &-technologies {
-        grid-column: 2/-1;
-        // grid-row: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        align-items: center;
+        // grid-column: 2/-1;
+        // // grid-row: 1;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // justify-items: center;
+        // align-items: center;
       }
 
       &-buttons {
@@ -140,12 +141,14 @@
     font-size: 17vw;
   }
 
-  main#about {
+  main#about,
+  main#work,
+  main#contact {
     padding: 5rem 1rem 2rem 1rem;
   }
 
-  main#contact {
-    padding-bottom: 0;
+  main#contact .lg-heading {
+    font-size: 5rem;
   }
 
   .contact-container {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .menu-btn {
   position: absolute;
   right: 35px;
@@ -141,7 +140,7 @@ header {
   z-index: 2;
   width: 100%; }
 
-.text-secondary {
+.text-secondary, .projects .card-text-title {
   color: #eece1a;
   letter-spacing: 1px; }
 
@@ -200,7 +199,7 @@ main#about {
   border-bottom: 5px solid #eece1a;
   width: 100%;
   margin-inline: auto; }
-  .about-info .courses .text-secondary {
+  .about-info .courses .text-secondary, .about-info .courses .projects .card-text-title, .projects .about-info .courses .card-text-title {
     text-align: center;
     margin-bottom: 2rem; }
   .about-info .courses .course {
@@ -219,48 +218,38 @@ main#about {
     .about-info .courses .course span {
       color: #eece1a; }
 
+main#work {
+  max-width: 960px;
+  margin-inline: auto;
+  overflow-x: hidden; }
+
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 3rem;
   margin-top: 4rem; }
   .projects .card {
+    background-color: #515151;
+    padding: 1rem 2rem;
+    border-bottom: 5px solid #eece1a;
+    width: 100%;
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 50px calc(150px - $gap) 1fr;
-    gap: 2rem 3rem;
-    border-bottom: 8px solid #eece1a;
-    padding: 2rem;
-    padding-right: 3rem;
-    background-color: #515151; }
-    .projects .card-title {
-      font-size: 2.8rem;
-      grid-column: 1 / -1;
-      grid-row: 1;
-      text-align: center;
-      letter-spacing: 1px; }
+    grid-template-areas: 'picture text' 'tech    tech' 'buttons buttons';
+    gap: 3rem; }
     .projects .card-picture {
-      grid-column: 1;
-      grid-row: 2 / 3;
-      max-width: 100%;
-      height: 200px; }
-    .projects .card-paragraph {
-      grid-column: 2 / -1;
-      grid-row: 2;
-      line-height: 2; }
+      grid-area: picture; }
+    .projects .card-text {
+      grid-area: text; }
     .projects .card-technologies {
-      grid-column: 2;
-      grid-row: 2;
+      grid-area: tech;
       display: flex;
-      justify-content: space-around; }
-      § .projects .card-technologies-logo {
-        width: 4rem;
-        aspect-ratio: 1/1; }
+      justify-content: space-around;
+      width: 100%; }
+      .projects .card-technologies-logo {
+        width: 50px;
+        height: 50px; }
     .projects .card-buttons {
-      grid-column: 1;
-      grid-row: 3;
+      grid-area: buttons;
       display: flex;
-      flex-direction: column;
+      width: 100%;
       gap: 0.75rem; }
       .projects .card-buttons-btn {
         width: 100%;
@@ -397,22 +386,10 @@ main#about {
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .projects .card {
-    grid-template-rows: auto 200px 1fr auto; }
-    .projects .card-picture {
-      grid-column: 1;
-      grid-row: 2; }
-    .projects .card-title {
-      grid-column: 1/-1;
-      grid-row: 1; }
-    .projects .card-paragraph {
-      grid-column: 1/-1;
-      grid-row: 3; }
-    .projects .card-technologies {
-      grid-column: 2/-1;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      align-items: center; }
+    grid-template-areas: 'picture' 'text' 'tech' 'buttons';
+    justify-items: center; }
+    .projects .card-text-title {
+      text-align: center; }
     .projects .card-buttons {
       grid-column: 1/-1;
       grid-row: 4; } }
@@ -422,10 +399,12 @@ main#about {
     margin-top: 10vh;
     margin-top: 10dvh;
     font-size: 17vw; }
-  main#about {
-    padding: 5rem 1rem 2rem 1rem; }
+  main#about,
+  main#work,
   main#contact {
-    padding-bottom: 0; }
+    padding: 5rem 1rem 2rem 1rem; }
+  main#contact .lg-heading {
+    font-size: 5rem; }
   .contact-container {
     grid-template-columns: 1fr;
     gap: 2rem; }
